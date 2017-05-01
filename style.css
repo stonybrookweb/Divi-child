@@ -1,0 +1,19 @@
+/*
+ Theme Name:   NAWMBA Boston Chapter
+ Theme URI:    https://www.mbawomenboston.org
+ Description:  NAWMBA Boston Chapter
+ Author:       A. Martin
+ Author URI:   http://www.stonybrookweb.com
+ Template:     Divi
+
+*/
+
+
+/* Eventbrite styles */
+.eventbrite-widget iframe {
+    min-height: 400px;
+}
+
+.page-template-eventbrite-index #main-content .container::before {
+  background-color: initial;
+}
