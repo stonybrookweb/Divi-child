@@ -11,7 +11,7 @@
 
 /* Eventbrite styles */
 .eventbrite-widget iframe {
-    min-height: 400px;
+  min-height: 400px;
 }
 
 .page-template-eventbrite-index #main-content .container::before,
@@ -20,6 +20,31 @@
 }
 
 .past-eventbrite {
-    margin-bottom: 50px;
-    border-bottom: 1px lightgrey dotted;
+  margin-bottom: 50px;
+  border-bottom: 1px lightgrey dotted;
+}
+
+/* Secondary menu styles */
+.menu-join-today {
+  background: rgba(169,32,8, .8);
+  border-radius: 30px;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+}
+
+#top-header .menu-join-today a {
+  color: #fff;
+  padding: 10px 14px;
+}
+
+#top-header .container {
+  padding: 6px 0;
+}
+
+#et-secondary-menu > ul > li a {
+  padding-bottom: 0px;
+}
+
+#et-secondary-menu > ul > li.menu-join-today:hover {
+  background: #15506f;
 }
