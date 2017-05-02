@@ -48,3 +48,9 @@
 #et-secondary-menu > ul > li.menu-join-today:hover {
   background: #15506f;
 }
+
+/* Mobile menu Secondary menu styles */
+.et_mobile_menu .menu-join-today a{
+  color: #fff;
+  text-align: center;
+}
