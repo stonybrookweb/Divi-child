@@ -53,10 +53,18 @@ get_header(); ?>
 					eventbrite_paging_nav( $events );
 
 				else :
-					// If no content, include the "No posts found" template.
-					get_template_part( 'content', 'none' );
+					//If no events post a custom notice
+				?>
 
-				endif;
+					<article>
+						<header class="entry-header">
+							<h1> There are no events currently scheduled.</h1>
+							<p>Please check back soon!</p>
+							<p>Take a look at some of our <a href="https://www.mbawomenboston.org/eventbrite/recent-events/">past events.</a></p>
+						</header><!-- .entry-header -->
+					</article><!-- #post-## -->
+
+				<?php endif;
 
 				// Return $post to its rightful owner.
 				wp_reset_postdata();
