@@ -11,6 +11,10 @@ function my_theme_enqueue_styles(){
 
     // load child theme stylesheet  // WordPress seems to do automatically don't duplicate
     // wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array($parent_style), wp_get_theme()->get('Version'));
+
+    // load custom scripts from child theme
+    wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri() . '/scripts/site.js', array() ,false, true);
+
 }
 
 

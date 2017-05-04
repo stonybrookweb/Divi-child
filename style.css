@@ -54,3 +54,15 @@
   color: #fff;
   text-align: center;
 }
+
+
+/* Style Unauthorized Page when Divi Builder is used */
+/* Page structure is different when Divi Builder is used */
+/* This is needed to properly format MemberPress unauthorized messages */
+
+.mempressUnauthorized #main-content {
+    padding-top: 58px;
+    width: 80%;
+    max-width: 1080px;
+    margin: auto;
+}
