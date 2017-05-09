@@ -60,7 +60,7 @@ get_header(); ?>
 						<header class="entry-header">
 							<h1> There are no events currently scheduled.</h1>
 							<p>Please check back soon!</p>
-							<p>Take a look at some of our <a href="https://www.mbawomenboston.org/eventbrite/recent-events/">past events.</a></p>
+							<p>Take a look at some of our <a href="https://www.mbawomenboston.org/events/recent-events/">past events.</a></p>
 						</header><!-- .entry-header -->
 					</article><!-- #post-## -->
 

@@ -32,7 +32,7 @@
 						// workaround API incorrect linking
 						$last_slash = strrpos($post->url, '/');
 						$slug = substr($post->url, $last_slash);
-						$slug = "/eventbrite" . $slug; // trailing slash included in results of substr
+						$slug = "/events" . $slug; // trailing slash included in results of substr
 						?>
 
  						<article id="event-<?php the_ID(); ?>" <?php post_class("past-eventbrite"); ?>>
