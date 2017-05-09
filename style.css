@@ -40,6 +40,10 @@
     text-align: center;
 }
 
+.no-events-scheduled {
+    text-align: center;
+    min-height: 400px;
+}
 
 /* Secondary menu styles */
 .menu-join-today {
