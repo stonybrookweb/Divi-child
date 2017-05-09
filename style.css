@@ -83,3 +83,33 @@
     max-width: 1080px;
     margin: auto;
 }
+
+
+/* Footer Menu */
+#et-footer-nav {
+  border-top: 1px solid #F5F5F5;
+}
+
+
+/*** Responsive Styles Large Desktop And Above ***/
+@media all and (min-width: 1405px) {
+  /* Footer Menu */
+  .footer-menu-site-credit {
+      float: right;
+  }
+}
+
+
+
+/*** Responsive Styles Standard Desktop Only ***/
+@media all and (min-width: 1100px) and (max-width: 1405px) {
+  /* Footer Menu */
+  .footer-menu-site-credit {
+      float: right;
+  }
+}
+
+/*** Responsive Styles Tablet And Below ***/
+@media all and (max-width: 980px) {
+
+}

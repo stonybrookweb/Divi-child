@@ -132,4 +132,16 @@ function eb_meta(){
 }
 
 add_shortcode( 'eb_meta', 'eb_meta');
+
+function updateFooterYear(){
+  ?>
+  <script>
+  jQuery(document).ready(function(){
+    var replacementText = jQuery('.copyright-year a').html().replace("2016", "<?php echo date('Y'); ?>");
+    jQuery('.copyright-year a').html(replacementText);
+  });
+  </script>
+<?php }
+
+add_action('wp_footer', 'updateFooterYear');
 ?>
