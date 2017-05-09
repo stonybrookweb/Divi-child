@@ -21,8 +21,25 @@
 
 .past-eventbrite {
   margin-bottom: 50px;
+  padding-bottom: 50px;
   border-bottom: 1px lightgrey dotted;
 }
+
+.past-eventbrite .post-thumbnail img,
+.page-template-eventbrite-index .wp-post-image {
+    display: block;
+    margin: 0px auto 30px;
+}
+
+.past-eventbrite .entry-title,
+.page-template-eventbrite-index .entry-title {
+    text-align: center;
+}
+
+.past-eventbrite .entry-meta {
+    text-align: center;
+}
+
 
 /* Secondary menu styles */
 .menu-join-today {
