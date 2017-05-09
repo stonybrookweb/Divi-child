@@ -43,7 +43,7 @@
 
 /* Secondary menu styles */
 .menu-join-today {
-  background: rgba(169,32,8, .8);
+  background: #920000;
   border-radius: 30px;
   -webkit-transition: all .8s ease;
   transition: all .8s ease;
@@ -63,7 +63,7 @@
 }
 
 #et-secondary-menu > ul > li.menu-join-today:hover {
-  background: #15506f;
+  background: #c5b587;
 }
 
 /* Mobile menu Secondary menu styles */
