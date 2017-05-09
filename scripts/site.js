@@ -15,3 +15,12 @@ if (mempressUnauthorized == true && pageBuilderUsed == true){
 }
 
 });
+
+
+
+// Quick temporary fix for sorting eventbrite events
+if(jQuery("body").hasClass("page-template-past-eventbrite-index")){
+
+  articles = jQuery("#content-area article").reverse().detach();
+  jQuery("#content-area").append(articles);
+}
