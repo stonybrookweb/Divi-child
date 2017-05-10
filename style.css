@@ -8,6 +8,9 @@
 
 */
 
+/* General Styles */
+
+
 
 /* Eventbrite styles */
 .eventbrite-widget iframe {
@@ -92,6 +95,42 @@
     width: 80%;
     max-width: 1080px;
     margin: auto;
+}
+
+.mp_wrapper.mp_login_form {
+    margin-bottom: 60px;
+}
+
+
+.mepr-share-button  {
+    position: relative;
+    padding: 0.3em 1em;
+    border: 2px solid;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7em !important;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.mepr-share-button  {
+    display: inline-block;
+    margin-top: 20px;
+    color: inherit;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.mepr-share-button:hover {
+    padding: 0.3em 2em 0.3em 1em;
+    border: 2px solid transparent;
+    background: #c5b587;
+    color: #fff;
 }
 
 
