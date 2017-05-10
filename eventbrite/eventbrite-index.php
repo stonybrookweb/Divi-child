@@ -37,7 +37,14 @@ get_header(); ?>
 								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 								<div class="entry-meta">
-									<?php eventbrite_event_meta(); ?>
+									<?php // eventbrite_event_meta(); ?>
+
+									<?php $venue = eventbrite_event_venue(); // get venue object for current event ?>
+									<p><?php echo eventbrite_event_time(); ?><br>
+									<?php echo $venue->name; ?><br>
+									<?php echo $venue->address->localized_address_display; ?><br>
+									<a href="<?php echo eventbrite_event_eb_url(); ?>" target="_blank">Details</a></p>
+
 								</div><!-- .entry-meta -->
 							</header><!-- .entry-header -->
 

@@ -36,8 +36,14 @@
     text-align: center;
 }
 
-.past-eventbrite .entry-meta {
+.past-eventbrite .entry-meta,
+.single-event .entry-meta,
+.page-template-eventbrite-index .entry-meta {
     text-align: center;
+}
+
+.single-event .entry-meta {
+    margin-bottom: 40px;
 }
 
 .no-events-scheduled {
