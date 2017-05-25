@@ -17,6 +17,14 @@
   min-height: 400px;
 }
 
+.fa.fa-calendar.eb_event_placeholder_icon {
+  -ms-transform: rotate(-15deg); /* IE 9 */
+  -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+  transform: rotate(-15deg);
+  font-size: 250px;
+  color: #7ebec5;
+}
+
 .page-template-eventbrite-index #main-content .container::before,
 .page-template-past-eventbrite-index #main-content .container::before{
   background-color: initial;

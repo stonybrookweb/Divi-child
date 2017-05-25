@@ -15,6 +15,9 @@ function my_theme_enqueue_styles(){
     // load custom scripts from child theme
     wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri() . '/scripts/site.js', array() ,false, true);
 
+    // Font Awesome!!
+    wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/1798a3d786.js', array() ,false, true);
+
 }
 
 
@@ -30,9 +33,6 @@ add_action( 'after_setup_theme', 'themeslug_setup' );
 
 
 // Create Shortcodes for use in Divi Theme Page Builder
-// TODO: Refactor these shortcodes more efficiently if possible but keeping in mind using shortcodes in Divi Page Builder
-// This way works best so far after several attempts
-
 
 function eb_image(){
   global $post;
@@ -58,8 +58,8 @@ function eb_image(){
         ob_end_clean();
         return $output;
   else :
-    // TODO: Determine what to do for home page if no current events
-      return none;
+    //If no event return an icon
+      return '<i class="fa fa-calendar eb_event_placeholder_icon" aria-hidden="true"></i>';
   endif;
   // Return $post to its rightful owner.
   wp_reset_postdata();
@@ -82,9 +82,6 @@ function eb_widget(){
     $output = ob_get_contents();
     ob_end_clean();
     return $output;
-  else :
-    // TODO: Determine what to do for home page if no current events
-    return none;
   endif;
   // Return $post to its rightful owner.
   wp_reset_postdata();
@@ -112,9 +109,6 @@ function eb_title(){
     $output = ob_get_contents();
     ob_end_clean();
     return $output;
-  else :
-    // TODO: Determine what to do for home page if no current events
-    return none;
   endif;
   // Return $post to its rightful owner.
   wp_reset_postdata();
@@ -122,31 +116,6 @@ function eb_title(){
 
 
 add_shortcode( 'eb_title', 'eb_title');
-
-
-function eb_meta(){
-  $events = new Eventbrite_Query( apply_filters( 'eventbrite_query_args', array(
-    'limit' => 1,            // integer
-  ) ) );
-
-  ob_start();
-  if ( $events->have_posts() ) :
-    while ( $events->have_posts() ) : $events->the_post();
-        eventbrite_event_meta();
-    endwhile;
-    $output = ob_get_contents();
-    ob_end_clean();
-    return $output;
-  else :
-    // TODO: Determine what to do for home page if no current events
-    return none;
-  endif;
-  // Return $post to its rightful owner.
-  wp_reset_postdata();
-}
-
-
-add_shortcode( 'eb_meta', 'eb_meta');
 
 
 function eb_description(){
@@ -177,8 +146,13 @@ function eb_description(){
     ob_end_clean();
     return $output;
   else :
-    // TODO: Determine what to do for home page if no current events
-    return none;
+    // If no event return some default text
+    $site_url = site_url();
+    $eb_events_url = $site_url . '/events/recent-events/';
+    $output = '<p>MBA Women Boston hosts many events during the year. Please check back often to see when our next event is scheduled.<p>';
+    $output .= '<p>You can see the types of events we host by visting our <a href="' . $eb_events_url . '">recent events page.</a>';
+    $output .= '<p>Sign up for our email list below and follow us on social media for event annoucements.';
+    return $output;
   endif;
   // Return $post to its rightful owner.
   wp_reset_postdata();
@@ -188,6 +162,7 @@ function eb_description(){
 add_shortcode( 'eb_description', 'eb_description');
 
 
+// Footer year is set in theme options. This updates it to the current year
 function updateFooterYear(){
   ?>
   <script>
