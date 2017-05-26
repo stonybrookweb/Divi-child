@@ -157,6 +157,12 @@
     display: none;
 }
 
+/* Jetpack shareaddy */
+.sharedaddy.sd-sharing-enabled {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
 /* Footer Menu */
 #et-footer-nav {
   border-top: 1px solid #F5F5F5;
