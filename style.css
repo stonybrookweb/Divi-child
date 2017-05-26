@@ -110,7 +110,8 @@
 }
 
 
-.mepr-share-button  {
+.mepr-share-button,
+.mepr-submit  {
     position: relative;
     padding: 0.3em 1em;
     border: 2px solid;
@@ -134,13 +135,17 @@
     text-decoration: none;
 }
 
-.mepr-share-button:hover {
+.mepr-share-button:hover,
+.mepr-submit:hover {
     padding: 0.3em 2em 0.3em 1em;
     border: 2px solid transparent;
     background: #c5b587;
     color: #fff;
 }
 
+.mp_wrapper .mp-form-row {
+    margin-bottom: 25px;
+}
 
 /* Footer Menu */
 #et-footer-nav {
